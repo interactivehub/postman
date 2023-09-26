@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option go_package = "github.com/interactivehub/engine/proto";
+
+import "types.proto";
+
+package users_service;
+
+service UsersService {
+    rpc NewUser(NewUserRequest) NewUserResponse 
+}
