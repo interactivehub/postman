@@ -1,8 +1,12 @@
 syntax = "proto3";
 
-option go_package = "github.com/interactivehub/engine/proto";
+option go_package = "./proto";
 
 package users_service;
+
+service UsersService {
+    rpc NewUser(NewUserRequest) returns (NewUserResponse);
+}
 
 message NewUserRequest {
     string user_id = 1;
