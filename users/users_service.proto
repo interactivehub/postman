@@ -1,11 +1,11 @@
 syntax = "proto3";
 
-option go_package = "./proto";
+option go_package = "./proto/user";
 
 package users_service;
 
 service UsersService {
-    rpc NewUser(NewUserRequest) returns (NewUserResponse);
+    rpc NewUser(NewUserRequest) returns (NewUserResponse) {};
 }
 
 message NewUserRequest {
