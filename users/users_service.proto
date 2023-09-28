@@ -15,7 +15,5 @@ message NewUserRequest {
 }
 
 message NewUserResponse {
-    bool success = 1;
-    string error = 2;
-    string data = 3;
+    string user_id = 1;
 }
