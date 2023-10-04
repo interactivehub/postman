@@ -4,16 +4,14 @@ option go_package = "./domain/user";
 
 package users_service;
 
+import "google/protobuf/empty.proto";
+
 service UsersService {
-    rpc NewUser(NewUserRequest) returns (NewUserResponse) {};
+    rpc NewUser(NewUserRequest) returns (google.protobuf.Empty) {};
 }
 
 message NewUserRequest {
     string user_id = 1;
     string unique_id = 2;
     string nickname = 3;
-}
-
-message NewUserResponse {
-    string user_id = 1;
 }
