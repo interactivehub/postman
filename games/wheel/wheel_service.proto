@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option go_package = "./domain/games/wheel";
+
+package wheel_service;
+
+import "google/protobuf/empty.proto";
+
+service WheelService {
+    rpc JoinWheelRound(JoinWheelRoundRequest) returns (google.protobuf.Empty) {};
+}
+
+message JoinWheelRoundRequest {
+    string user_id = 1;
+    float bet = 2;
+    WheelPick pick = 3;
+}
+
+enum WheelPick {
+    Grey = 0;
+    Blue = 1;
+    Yellow = 2;
+    Red = 3;
+}
